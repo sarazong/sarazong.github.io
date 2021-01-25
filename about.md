@@ -3,7 +3,8 @@ layout: page
 title: About Me
 ---
 
-![about me](https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg)
+<img src="https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg" width="100" height="100">
+
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
