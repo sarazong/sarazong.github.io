@@ -3,7 +3,7 @@ permalink:           pretty
 
 # Setup
 title:               Sara Zong
-tagline:             Starting A Data Science Blog
+tagline:             is Starting A Data Science Blog
 url:                 http://sarazong.github.io
 paginate:            2
 baseurl:             ""
