@@ -2,7 +2,7 @@
 layout: page
 title: About Me
 ---
-
+![me](https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg)
 <img src="https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg" width="100" />
 
 <p class="message">
