@@ -2,7 +2,8 @@
 layout: page
 title: About Me
 ---
-![pic of me](/images/small_size_profile_pic.jpeg)
+
+![pic of me](https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpg)
 
 I am currently enrolled in the Metis data science bootcamp, transitioning from bench work in preclinical drug discovery (to biostatistics) to data science. 
 I am interested in statistics and data analysis--using both to find patterns in data for effective decision making.
