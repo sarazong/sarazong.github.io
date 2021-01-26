@@ -2,14 +2,18 @@
 layout: page
 title: About Me
 ---
-
-<img src="https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg" alt="about me" width=400 height=500 align=left>
+<img src="https://github.com/sarazong/sarazong.github.io/blob/master/images/small_size_profile_pic.jpeg" alt="pic of me" width="400">
 
 <p class="message">
-Why my image is not displaying properly?
+Why my image is not displaying properly? Will come back to figure it out.
+I am currently enrolled in the Metis data science bootcamp, trying to transition from bench work in preclinical drug discovery (to biostatistics) to data science. 
+I am interested in statistics and data analysis--using both to find patterns in data for effective decision making.
+I want to use this site to share my data science projects and new skills I learn. 
 </p>
 
 <p class="message">
-I like to play board games.
+Before Metis, I got my master's in biostatistics from University of Michigan, Ann Arbor. Before graduate school, I worked as a senior research associate on preclinical drug discovery for Hepititis B virus.  
 </p>
 
+## My GitHub Link:
+<p><a href="https://github.com/sarazong"></p>
