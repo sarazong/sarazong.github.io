@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+  preview:
+    browser: true
+
+website:
+  title: " {{< fa image-portrait >}} Sara(Yuhua) Zong"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "{{< fa regular hand-spock >}} Hello"
+      - text: "{{< fa regular lightbulb >}} Learn"
+        menu: 
+          - href: pkg_unit_test_1.qmd
+            text: "Unit Test"
+          - href: setup_homebrew_2.qmd
+            text: "Homebrew"
+
+format:
+  html:
+    # theme: cosmo
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+

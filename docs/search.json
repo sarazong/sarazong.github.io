@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sara Zong: Hello",
+    "section": "",
+    "text": "Intro"
+  },
+  {
+    "objectID": "pkg_unit_test.html",
+    "href": "pkg_unit_test.html",
+    "title": "Unit Test in Data Engineering",
+    "section": "",
+    "text": "My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important, so that we produce accurate results and interpretations from exploratory analysis and models. It’s especially important to for clinical data since a lot of the time, we will end up submitting our trial to FDA for product approval. Having a reliable data pipeline would facilitate the review of the clinical trial.\nUnit testing in software engineering is the practice to test a component of a software to make sure each component is working as it is supposed to. The concept of unit testing can also be applied to data engineering.\nImagine we have a data pipeline to load in the raw data, transform/clean the data, and then save the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:\n\nload data: test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation\ndata transformation"
+  },
+  {
+    "objectID": "setup_homebrew.html",
+    "href": "setup_homebrew.html",
+    "title": "Homebrew and Packages",
+    "section": "",
+    "text": "If you find zsh, bash, and all those terminal commands to install this and that confusing, you are not alone. When I first started out, with training in Data Science (more specifically, data transformation, exploratory analysis, and statistical inference), I couldn’t care less about shell, environment, and installing tools that could work magics, as long as the few R packages I used for data analysis could be installed and worked in analysis."
+  },
+  {
+    "objectID": "pkg_unit_test_1.html",
+    "href": "pkg_unit_test_1.html",
+    "title": "Unit Test in Data Engineering",
+    "section": "",
+    "text": "My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important, so that we produce accurate results and interpretations from exploratory analysis and models. It’s especially important to for clinical data since a lot of the time, we will end up submitting our trial to FDA for product approval. Having a reliable data pipeline would facilitate the review of the clinical trial.\nUnit testing in software engineering is the practice to test a component of a software to make sure each component is working as it is supposed to. The concept of unit testing can also be applied to data engineering.\nThis is especially useful for data that is changing constantly. With continuous\nintegration Imagine we have a data pipeline to load in the raw data, transform/clean the data, and then save/upload the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:\n\nload data: test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation\ndata transformation: specific test would depend on the particular transformation step. The idea is to create a mock dataset and use it to test the transformation functions. If the transformation is replacing NA of a variable with Not reported, test whether the transformed variable contain any NA value. If collapsing 5 categories of a variable to 3 categories, test whether the resulting variable contains 3 categories.\nsave/upload cleaned data: connect to the database and check if the"
+  },
+  {
+    "objectID": "setup_homebrew_2.html",
+    "href": "setup_homebrew_2.html",
+    "title": "Homebrew and Packages",
+    "section": "",
+    "text": "If you find zsh, bash, and all those terminal commands to install this and that confusing, you are not alone. When I first started out, with training in Data Science (more specifically, data transformation, exploratory analysis, and statistical inference), I couldn’t care less about shell, environment, and installing tools that could work magics, as long as the few R packages I used for data analysis could be installed and worked in analysis."
+  }
+]
