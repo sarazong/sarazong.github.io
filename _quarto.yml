@@ -10,12 +10,19 @@ website:
     left:
       - href: index.qmd
         text: "{{< fa regular hand-spock >}} Hello"
-      - text: "{{< fa regular lightbulb >}} Learn"
+      - text: "{{< fa regular lightbulb >}} Learn How"
         menu: 
-          - href: pkg_unit_test_1.qmd
-            text: "Unit Test"
+          # - href: pkg_unit_test_1.qmd
+          #   text: "Unit Test"
           - href: setup_homebrew_2.qmd
             text: "Homebrew"
+          # - href: transformation_python_3.qmd
+          #   text: "Clean Data Python"
+          # - href: shiny_basics_5.qmd
+          #   text: "Shiny Basics"
+          # - href: shiny_3dscatter_plotly_6.qmd
+          #   text: "Shiny 3D Scatter"
+          
 
 format:
   html:

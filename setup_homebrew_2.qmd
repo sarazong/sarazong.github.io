@@ -3,8 +3,8 @@ title: "Homebrew and Packages"
 ---
 
 If you find `zsh`, `bash`, and all those terminal commands to install this and that
-confusing, you are not alone. When I first started out, with training in Data Science
-(more specifically, data transformation, exploratory analysis, and statistical
-inference), I couldn't care less about shell, environment, and installing tools 
-that could work magics, as long as the few R packages I used for data analysis could 
-be installed and worked in analysis. 
+confusing, you are not alone. When I first started out, with training focused on 
+data analysis (more specifically, data transformation, exploratory analysis, and 
+statistical inference), I didn't have much exposure to shell, environment, and installing 
+tools that are used to build infrastructures. As long as the R packages I used for 
+data analysis could be installed and worked in analysis. 
