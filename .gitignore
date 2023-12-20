@@ -6,4 +6,5 @@
 /.quarto/
 
 # leave image directory out
+!docs/imgs/
 imgs/
