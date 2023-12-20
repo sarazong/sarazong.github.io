@@ -4,3 +4,6 @@
 .Ruserdata
 
 /.quarto/
+
+# leave image directory out
+imgs/
