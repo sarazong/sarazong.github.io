@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title> Sara(Yuhua) Zong - Unit Test in Data Engineering</title>
+<title> Sara(Yuhua) Zong - Homebrew and Packages for Mac</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -74,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><i class="fa-regular fa-face-smile-wink" aria-label="face-smile-wink"></i> Sara(Yuhua) Zong</span>
+    <span class="navbar-title"><i class="fa-solid fa-image-portrait" aria-label="image-portrait"></i> Sara(Yuhua) Zong</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -85,19 +119,19 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text"><i class="fa-regular fa-hand-spock" aria-label="hand-spock"></i> Intro</span></a>
+ <span class="menu-text"><i class="fa-regular fa-hand-spock" aria-label="hand-spock"></i> Hello</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-regular-lightbulb--learn" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text"><i class="fa-regular fa-lightbulb" aria-label="lightbulb"></i> Learn</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-regular-lightbulb--learn-how" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text"><i class="fa-regular fa-lightbulb" aria-label="lightbulb"></i> Learn How</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fa-regular-lightbulb--learn">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fa-regular-lightbulb--learn-how">    
         <li>
-    <a class="dropdown-item" href="./pkg_unit_test_1.html" rel="" target="">
+    <a class="dropdown-item" href="./l1_unit_test.html" rel="" target="">
  <span class="dropdown-text">Unit Test</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./setup_homebrew_2.html" rel="" target="">
+    <a class="dropdown-item" href="./l2_homebrew.html" rel="" target="">
  <span class="dropdown-text">Homebrew</span></a>
   </li>  
     </ul>
@@ -114,14 +148,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#installing-homebew" id="toc-installing-homebew" class="nav-link active" data-scroll-target="#installing-homebew">Installing Homebew</a></li>
+  <li><a href="#installing-packages-with-homebrew" id="toc-installing-packages-with-homebrew" class="nav-link" data-scroll-target="#installing-packages-with-homebrew">Installing Packages with Homebrew</a></li>
+  <li><a href="#uninstalling-homebrew" id="toc-uninstalling-homebrew" class="nav-link" data-scroll-target="#uninstalling-homebrew">Uninstalling Homebrew</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Unit Test in Data Engineering</h1>
+<h1 class="title">Homebrew and Packages for Mac</h1>
 </div>
 
 
@@ -136,17 +180,63 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important, so that we produce accurate results and interpretations from exploratory analysis and models. It’s especially important to for clinical data since a lot of the time, we will end up submitting our trial to FDA for product approval. Having a reliable data pipeline would facilitate the review of the clinical trial.</p>
-<p><strong>Unit testing</strong> in software engineering is the practice to test a component of a software to make sure each component is working as it is supposed to. The concept of unit testing can also be applied to data engineering.</p>
-<p>This is especially useful for data that is changing constantly. With <strong>continuous<br>
-integration</strong> Imagine we have a data pipeline to load in the raw data, transform/clean the data, and then save/upload the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:</p>
+<p>If you find <code>zsh</code>, <code>bash</code>, and all those terminal commands to install stuff confusing, I was there when I first started out learning data science. With training focused on data analysis (more specifically, data transformation, exploratory data analysis, and statistical inference), I didn’t have much exposure to shell and environment. As long as the R packages I used for data analysis worked, I had no complaint. However, as my toolbox expanded over time, I found it important to have some basic understanding on how to manage my tools, which is what homebrew is for.</p>
+<section id="installing-homebew" class="level3">
+<h3 class="anchored" data-anchor-id="installing-homebew">Installing Homebew</h3>
+<p>Homebrew installs and organizes packages for macOS and Linux. To use homebrew, we install it with:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># paste the following command in terminal and hit return/enter</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>bin<span class="sc">/</span>bash <span class="sc">-</span>c <span class="st">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will be asked for login password:</p>
+<p><img src="imgs/homebrew/homebrew_1.png" class="img-fluid" style="width:72.0%"></p>
+<p>Once you enter your password, you will be shown what are being installed and just follow the prompt: <img src="imgs/homebrew/homebrew_2.png" class="img-fluid" style="width:80.0%"></p>
+<p>Even if homebrew is already installed, installation will still be run when you hit the <code>return/enter</code> key. After installation, you can check where and what version of homebrew is installed:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check where homebrew is installed</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>which brew</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check version of homebrew</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>brew <span class="sc">--</span>version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>By default, Apple silicon chip Mac installs homebrew in <code>/opt/homebew</code>, while intel chip Mac installs it in <code>/usr/local</code>. As <a href="https://docs.brew.sh/Installation" target="_blank">homebrew documentation</a> explains, defaulting to those locations avoids <code>sudo</code> when install packages.</p>
+</section>
+<section id="installing-packages-with-homebrew" class="level3">
+<h3 class="anchored" data-anchor-id="installing-packages-with-homebrew">Installing Packages with Homebrew</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>brew install <span class="sc">&lt;</span>PACKAGE_NAME<span class="sc">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># for example, installing PostgreSQL</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>brew install postgresql</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The packages will be downloaded to <code>~/Library/Caches/Homebrew</code>, installed to their own directory <code>/urs/local/Cellar</code> (intel chip Mac), and their files symlinked (symbolic link, a file points to another file or directory in a different location) into <code>/urs/local/bin</code> or <code>/urs/local/opt</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list packages installed</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>brew list</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># update Homebrew and packages</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>brew update</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># uninstall package</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>brew uninstall <span class="sc">&lt;</span>PACKAGE_NAME<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="uninstalling-homebrew" class="level3">
+<h3 class="anchored" data-anchor-id="uninstalling-homebrew">Uninstalling Homebrew</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">/</span>bin<span class="sc">/</span>bash <span class="sc">-</span>c <span class="st">"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="summary" class="level3">
+<h3 class="anchored" data-anchor-id="summary">Summary</h3>
 <ul>
-<li><p><strong>load data:</strong> test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation</p></li>
-<li><p><strong>data transformation:</strong> specific test would depend on the particular transformation step. The idea is to create a mock dataset and use it to test the transformation functions. If the transformation is replacing <code>NA</code> of a variable with <code>Not reported</code>, test whether the transformed variable contain any <code>NA</code> value. If collapsing 5 categories of a variable to 3 categories, test whether the resulting variable contains 3 categories.</p></li>
-<li><p><strong>save/upload cleaned data:</strong> connect to the database and check if the</p></li>
+<li>install homebrew</li>
+<li>install packages with homebrew</li>
+<li>uninstall packages and/or homebrew</li>
 </ul>
+</section>
+<section id="reference" class="level3">
+<h3 class="anchored" data-anchor-id="reference">Reference</h3>
+<p><a href="https://docs.brew.sh/" target="_blank">Homebrew Documentation</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

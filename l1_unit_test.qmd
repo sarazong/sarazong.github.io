@@ -1,0 +1,46 @@
+---
+title: "Unit Test in Data Engineering"
+---
+
+My primary responsibility at my current job is transforming clinical trials data.
+Although data cleaning is always important for producing accurate results and 
+interpretations from exploratory analysis and models, it's especially important 
+when working with clinical data. A lot of the times, we submit our trials to FDA 
+for product approval. Having a reliable data pipeline would facilitate the review 
+of the trial and thus product approval. 
+
+**Unit testing** in software engineering is the practice to test a component of 
+a software to make sure the component is working as expected. The concept of unit 
+testing can also be applied to data engineering. 
+
+Unit testing is especially useful for data that is changing constantly, for example, 
+more subjects are being added to the database as the clinical trial progresses. 
+With **continuous integration** (the pipeline runs and tests whenever changes are 
+pushed to the code base), the tests would catch bugs when changes to the data or 
+code introduce them. More specifically, imaging you have a dataset that contains 
+five categories for the race variable, with values `Caucasian, Asian, African American, Native American, Unknown`. We want to map `Caucasian` to `White` while leaving all 
+the other categories asis when . However, when new record is being added to the electronic 
+data capture system, race field is left blank instead of being entered as `Unknown`.
+
+Imagine we have a very simple data pipeline to load in the raw data, transform/clean 
+the data, and then save/upload the cleaned data set(s). Each of these step can be 
+validated with unit test and here are some examples of how:
+
+- **load data:** test whether we have the correct raw dataset by checking specific 
+column(s) exist in the datasetk, or the number of columns match with expectation
+
+- **data transformation:** specific test would depend on the particular transformation 
+step. The idea is to create a mock dataset and use it to test the transformation 
+functions. If the transformation is replacing `NA` of a variable with `Not reported`, 
+test whether the transformed variable contain any `NA` value. If collapsing 5 categories 
+of a variable to 3 categories, test whether the resulting variable contains 3 categories.
+
+- **save/upload cleaned data:** connect to the database and check if the 
+
+
+
+
+
+
+
+

@@ -12,15 +12,19 @@ website:
         text: "{{< fa regular hand-spock >}} Hello"
       - text: "{{< fa regular lightbulb >}} Learn How"
         menu: 
-          # - href: pkg_unit_test_1.qmd
-          #   text: "Unit Test"
-          - href: setup_homebrew_2.qmd
+          - href: l1_unit_test.qmd
+            text: "Unit Test"
+          - href: l2_homebrew.qmd
             text: "Homebrew"
-          # - href: transformation_python_3.qmd
+          # - href: l3_transformation_python.qmd
           #   text: "Clean Data Python"
-          # - href: shiny_basics_5.qmd
+          # - href: l4_transformation_polars.qmd
+          #   text: "Clean Data Polar"
+          # - href: l5_shiny_basics.qmd
           #   text: "Shiny Basics"
-          # - href: shiny_3dscatter_plotly_6.qmd
+          # - href: l6_shiny_golem.qmd
+          #   text: "Shiny Golem"
+          # - href: l7_shiny_3dscatter.qmd
           #   text: "Shiny 3D Scatter"
           
 

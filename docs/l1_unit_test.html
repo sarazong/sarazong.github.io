@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title> Sara(Yuhua) Zong - Homebrew and Packages</title>
+<title> Sara(Yuhua) Zong - Unit Test in Data Engineering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><i class="fa-regular fa-face-smile-wink" aria-label="face-smile-wink"></i> Sara(Yuhua) Zong</span>
+    <span class="navbar-title"><i class="fa-solid fa-image-portrait" aria-label="image-portrait"></i> Sara(Yuhua) Zong</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -85,19 +85,19 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text"><i class="fa-regular fa-hand-spock" aria-label="hand-spock"></i> Intro</span></a>
+ <span class="menu-text"><i class="fa-regular fa-hand-spock" aria-label="hand-spock"></i> Hello</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-regular-lightbulb--learn" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
- <span class="menu-text"><i class="fa-regular fa-lightbulb" aria-label="lightbulb"></i> Learn</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-regular-lightbulb--learn-how" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text"><i class="fa-regular fa-lightbulb" aria-label="lightbulb"></i> Learn How</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-fa-regular-lightbulb--learn">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fa-regular-lightbulb--learn-how">    
         <li>
-    <a class="dropdown-item" href="./pkg_unit_test.html" rel="" target="">
+    <a class="dropdown-item" href="./l1_unit_test.html" rel="" target="">
  <span class="dropdown-text">Unit Test</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./setup_homebrew.html" rel="" target="">
+    <a class="dropdown-item" href="./l2_homebrew.html" rel="" target="">
  <span class="dropdown-text">Homebrew</span></a>
   </li>  
     </ul>
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homebrew and Packages</h1>
+<h1 class="title">Unit Test in Data Engineering</h1>
 </div>
 
 
@@ -136,7 +136,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>If you find <code>zsh</code>, <code>bash</code>, and all those terminal commands to install this and that confusing, you are not alone. When I first started out, with training in Data Science (more specifically, data transformation, exploratory analysis, and statistical inference), I couldn’t care less about shell, environment, and installing tools that could work magics, as long as the few R packages I used for data analysis could be installed and worked in analysis.</p>
+<p>My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important for producing accurate results and interpretations from exploratory analysis and models, it’s especially important when working with clinical data. A lot of the times, we submit our trials to FDA for product approval. Having a reliable data pipeline would facilitate the review of the trial and thus product approval.</p>
+<p><strong>Unit testing</strong> in software engineering is the practice to test a component of a software to make sure the component is working as expected. The concept of unit testing can also be applied to data engineering.</p>
+<p>Unit testing is especially useful for data that is changing constantly, for example, more subjects are being added to the database as the clinical trial progresses. With <strong>continuous integration</strong> (the pipeline runs and tests whenever changes are pushed to the code base), the tests would catch bugs when changes to the data or code introduce them. More specifically, imaging you have a dataset that contains five categories for the race variable, with values <code>Caucasian, Asian, African American, Native American, Unknown</code>. We want to map <code>Caucasian</code> to <code>White</code> while leaving all the other categories asis when . However, when new record is being added to the electronic data capture system, race field is left blank instead of being entered as <code>Unknown</code>.</p>
+<p>Imagine we have a very simple data pipeline to load in the raw data, transform/clean the data, and then save/upload the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:</p>
+<ul>
+<li><p><strong>load data:</strong> test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation</p></li>
+<li><p><strong>data transformation:</strong> specific test would depend on the particular transformation step. The idea is to create a mock dataset and use it to test the transformation functions. If the transformation is replacing <code>NA</code> of a variable with <code>Not reported</code>, test whether the transformed variable contain any <code>NA</code> value. If collapsing 5 categories of a variable to 3 categories, test whether the resulting variable contains 3 categories.</p></li>
+<li><p><strong>save/upload cleaned data:</strong> connect to the database and check if the</p></li>
+</ul>
 
 
 

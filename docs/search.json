@@ -2,36 +2,71 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Sara Zong: Hello",
+    "title": "Sara Zong: Hello there",
     "section": "",
-    "text": "Intro"
+    "text": "now\n\n\nWelcome to my blog! I was trained as a biologist focusing on molecular biology with a physics minor in college. After college, I worked in a university research lab and then a couple of biotech start-ups as a research associate. Although I earned promotions twice in three years in my second industry job, I also realized that without a PhD in biology, I would hit my career ceiling soon. As I tried to decide what to do, I became curious about efficient decision-making itself. It led me to statistics since it provides the tools to find patterns in information and to make informed decisions.\n\n\n\npast life\n\n\nI went back to school for my masters in Biostatistics. During graduate school, I learned to program in R and perform statistical analysis. The applied projects I worked on in school focused on statistical inference (trying to understand whether there is a relationship between variables of interest), but a lot of the time, we cared more about making predictions. Thus, I also enrolled in a data science bootcamp to expand my skill sets in predictive modeling.\nAfter bootcamp, I landed a job as a clinical data scientist at a biotech company, which is developing cancer diagnostic products. My main responsibilities are transforming clinical trial data into analysis-ready data sets and analyzing data to produce outputs for reports and manuscripts.\nWorking in a team setting, I get more exposure to tool building, such as developing R packages and Shiny apps for others. I learned to do many things that I would do occasionally, but could be very useful to be able to reproduce quickly since setting things up sometimes requires a lot of time and effort. This blog aims to record some of the things I learned over time and serves as a reference."
   },
   {
-    "objectID": "pkg_unit_test.html",
-    "href": "pkg_unit_test.html",
+    "objectID": "template_learn_how.html",
+    "href": "template_learn_how.html",
+    "title": "Template for Sara’s Learn How",
+    "section": "",
+    "text": "Why\n\n\nHow, with Examples\n\n\nSummary\n\n\nReferences"
+  },
+  {
+    "objectID": "l2_homebrew.html",
+    "href": "l2_homebrew.html",
+    "title": "Homebrew and Packages for Mac",
+    "section": "",
+    "text": "If you find zsh, bash, and all those terminal commands to install stuff confusing, I was there when I first started out learning data science. With training focused on data analysis (more specifically, data transformation, exploratory data analysis, and statistical inference), I didn’t have much exposure to shell and environment. As long as the R packages I used for data analysis worked, I had no complaint. However, as my toolbox expanded over time, I found it important to have some basic understanding on how to manage my tools, which is what homebrew is for.\n\nInstalling Homebew\nHomebrew installs and organizes packages for macOS and Linux. To use homebrew, we install it with:\n\n# paste the following command in terminal and hit return/enter\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\nYou will be asked for login password:\n\nOnce you enter your password, you will be shown what are being installed and just follow the prompt: \nEven if homebrew is already installed, installation will still be run when you hit the return/enter key. After installation, you can check where and what version of homebrew is installed:\n\n# check where homebrew is installed\nwhich brew\n# check version of homebrew\nbrew --version\n\nBy default, Apple silicon chip Mac installs homebrew in /opt/homebew, while intel chip Mac installs it in /usr/local. As homebrew documentation explains, defaulting to those locations avoids sudo when install packages.\n\n\nInstalling Packages with Homebrew\n\nbrew install &lt;PACKAGE_NAME&gt;\n# for example, installing PostgreSQL\nbrew install postgresql\n\nThe packages will be downloaded to ~/Library/Caches/Homebrew, installed to their own directory /urs/local/Cellar (intel chip Mac), and their files symlinked (symbolic link, a file points to another file or directory in a different location) into /urs/local/bin or /urs/local/opt.\n\n# list packages installed\nbrew list\n# update Homebrew and packages\nbrew update\n# uninstall package\nbrew uninstall &lt;PACKAGE_NAME&gt;\n\n\n\nUninstalling Homebrew\n\n/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)\"\n\n\n\nSummary\n\ninstall homebrew\ninstall packages with homebrew\nuninstall packages and/or homebrew\n\n\n\nReference\nHomebrew Documentation"
+  },
+  {
+    "objectID": "l4_transformation_polars.html",
+    "href": "l4_transformation_polars.html",
+    "title": "Data Manipulation with Polars",
+    "section": "",
+    "text": "From Pandas to Polars\nFrom Polars’ website, Polars processes data more efficiently by using all the available CPU cores in parallel. Since I work with clinical data sets, which are small data sets, data processing efficiency is less of a concern for me.\nThe syntax of Polars is the main attraction for me to look into it. It’s readable and it’s more similar to dplyr syntax. I am an R user.\n\n\nMy Polars Workflow\n\nRead in data set??\n\n\nLook Up Available Fields\n\n\n\nMap Categorical Variables\n\n\nCheck Mapping"
+  },
+  {
+    "objectID": "l5_shiny_basics.html",
+    "href": "l5_shiny_basics.html",
+    "title": "Shiny Basics",
+    "section": "",
+    "text": "Why\n\n\nHow, with Examples\nEvery time the server function is run, it’s run in a new local environment so that calculations done in individual run will not interfere with each other.\nThere are three arguments in server(input, output, session). input is a list-like object contains all input data from the app user. Input is read-only and cannot be modified (being re-assigned as something else) in the server. Input must be read in a reactive context, meaning inserting the input in render*()/reactive(), output will be changed automatically when input is changed.\noutput is very similar to input, as being a list-like object, use it for sending output. Always use the output object with a render*() function, which sets up reactive context that automatically tracks inputs and output AND converts output into HTML for display.\nImperative programming refers to immediate execution of the commands while declarative programming refers giving goals and constraints but relying on someone else to decide on how to act.\n\n\nSummary\n\n\nReferences\n\nMastering Shiny by Hadley Wickham"
+  },
+  {
+    "objectID": "l1_unit_test.html",
+    "href": "l1_unit_test.html",
     "title": "Unit Test in Data Engineering",
     "section": "",
-    "text": "My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important, so that we produce accurate results and interpretations from exploratory analysis and models. It’s especially important to for clinical data since a lot of the time, we will end up submitting our trial to FDA for product approval. Having a reliable data pipeline would facilitate the review of the clinical trial.\nUnit testing in software engineering is the practice to test a component of a software to make sure each component is working as it is supposed to. The concept of unit testing can also be applied to data engineering.\nImagine we have a data pipeline to load in the raw data, transform/clean the data, and then save the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:\n\nload data: test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation\ndata transformation"
+    "text": "My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important for producing accurate results and interpretations from exploratory analysis and models, it’s especially important when working with clinical data. A lot of the times, we submit our trials to FDA for product approval. Having a reliable data pipeline would facilitate the review of the trial and thus product approval.\nUnit testing in software engineering is the practice to test a component of a software to make sure the component is working as expected. The concept of unit testing can also be applied to data engineering.\nUnit testing is especially useful for data that is changing constantly, for example, more subjects are being added to the database as the clinical trial progresses. With continuous integration (the pipeline runs and tests whenever changes are pushed to the code base), the tests would catch bugs when changes to the data or code introduce them. More specifically, imaging you have a dataset that contains five categories for the race variable, with values Caucasian, Asian, African American, Native American, Unknown. We want to map Caucasian to White while leaving all the other categories asis when . However, when new record is being added to the electronic data capture system, race field is left blank instead of being entered as Unknown.\nImagine we have a very simple data pipeline to load in the raw data, transform/clean the data, and then save/upload the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:\n\nload data: test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation\ndata transformation: specific test would depend on the particular transformation step. The idea is to create a mock dataset and use it to test the transformation functions. If the transformation is replacing NA of a variable with Not reported, test whether the transformed variable contain any NA value. If collapsing 5 categories of a variable to 3 categories, test whether the resulting variable contains 3 categories.\nsave/upload cleaned data: connect to the database and check if the"
   },
   {
-    "objectID": "setup_homebrew.html",
-    "href": "setup_homebrew.html",
-    "title": "Homebrew and Packages",
+    "objectID": "l7_shiny_3dscatter.html",
+    "href": "l7_shiny_3dscatter.html",
+    "title": "Plotly 3D Scatterplot in Shiny",
     "section": "",
-    "text": "If you find zsh, bash, and all those terminal commands to install this and that confusing, you are not alone. When I first started out, with training in Data Science (more specifically, data transformation, exploratory analysis, and statistical inference), I couldn’t care less about shell, environment, and installing tools that could work magics, as long as the few R packages I used for data analysis could be installed and worked in analysis."
+    "text": "Why\n\n\nHow, with Examples\nTo display a plotly plot, use plotlyOutput() in ui and renderPlotly() in server\n\n\nSummary\n\n\nReferences\n\nMastering Shiny by Hadley Wickham\nInteractive web-based data visualization with R, plotly, and shiny by Carson Sievert\nStack overflow: Creating a reactive dataframe with shiny apps\nStack overflow: How to rotate 3D plotly continuous for R Shiny App"
   },
   {
-    "objectID": "pkg_unit_test_1.html",
-    "href": "pkg_unit_test_1.html",
-    "title": "Unit Test in Data Engineering",
+    "objectID": "l6_shiny_golem.html",
+    "href": "l6_shiny_golem.html",
+    "title": "Template for Sara’s Learn How",
     "section": "",
-    "text": "My primary responsibility at my current job is transforming clinical trials data. Although data cleaning is always important, so that we produce accurate results and interpretations from exploratory analysis and models. It’s especially important to for clinical data since a lot of the time, we will end up submitting our trial to FDA for product approval. Having a reliable data pipeline would facilitate the review of the clinical trial.\nUnit testing in software engineering is the practice to test a component of a software to make sure each component is working as it is supposed to. The concept of unit testing can also be applied to data engineering.\nThis is especially useful for data that is changing constantly. With continuous\nintegration Imagine we have a data pipeline to load in the raw data, transform/clean the data, and then save/upload the cleaned data set(s). Each of these step can be validated with unit test and here are some examples of how:\n\nload data: test whether we have the correct raw dataset by checking specific column(s) exist in the datasetk, or the number of columns match with expectation\ndata transformation: specific test would depend on the particular transformation step. The idea is to create a mock dataset and use it to test the transformation functions. If the transformation is replacing NA of a variable with Not reported, test whether the transformed variable contain any NA value. If collapsing 5 categories of a variable to 3 categories, test whether the resulting variable contains 3 categories.\nsave/upload cleaned data: connect to the database and check if the"
+    "text": "Why\n\n\nHow, with Examples\n\n\nSummary\n\n\nReferences"
   },
   {
-    "objectID": "setup_homebrew_2.html",
-    "href": "setup_homebrew_2.html",
-    "title": "Homebrew and Packages",
+    "objectID": "lx_R_misc_useful.html",
+    "href": "lx_R_misc_useful.html",
+    "title": "Useful to Know in R",
     "section": "",
-    "text": "If you find zsh, bash, and all those terminal commands to install this and that confusing, you are not alone. When I first started out, with training in Data Science (more specifically, data transformation, exploratory analysis, and statistical inference), I couldn’t care less about shell, environment, and installing tools that could work magics, as long as the few R packages I used for data analysis could be installed and worked in analysis."
+    "text": "Functions\n\n# remove all packages in an R project\nremove.packages(pkgs = row.names(x = installed.packages(priority = \"NA\")))\n\n# temporary directory and file(s) associate with an R session\ntempdir()\ntempfile()\n\n\n\n.RProfile\nWhen startup, R and Rstudio look for config files to control the behavior of your R session. .RProfile can be used at a user or project level.\n\nWhat does “control the behavior of you R session” mean? What specifically?\nHow user/project .RProfile differ?\n\n\n# modify .RProfile\nusethis::edit_r_profile()\n\n\n\nHow, with Examples\n\n\nSummary\n\n\nReferences"
+  },
+  {
+    "objectID": "l3_transformation_python.html",
+    "href": "l3_transformation_python.html",
+    "title": "Data Transformation with Python",
+    "section": "",
+    "text": "(Re)Mapping Categorical Variables in Pandas Dataframe\nTo understand the categories of a categorical variable, the first thing one does is to look at the distribution (counts) of the categories. df.value_counts(\"categorical_variable\")\ncategory is one of the data types in Pandas, representing nominal(unordered) categorical variable.\nTo map a categorical variable, there are a few options:\n\nOption 1: convert the variable to category as needed with df[\"variable\"] = df[\"variable\"].astype(\"category\") then map with df[\"variable\"].cat.rename_categories(mapping_dictionary).\nOption 2:"
   }
 ]
